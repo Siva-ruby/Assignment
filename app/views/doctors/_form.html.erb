@@ -1,0 +1,27 @@
+<%= form_with model: @doctor, local: true do |f| %>
+
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :category %><br>
+    <%= f.select :category, options_for_select([["Select", ""], "Cardiologist", "Dentist", "ENT Specialist", "Psychiatrists", "Radiologist", "Endocrinologist", "Neurologist"]), :class=>'input-focus' %>
+  </p>
+
+  <p>
+    <%= f.label :phone_no %><br>
+    <%= f.text_field :phone_no %>
+  </p>
+
+  <p>
+    <%= f.label :email %><br>
+    <%= f.text_field :email, :class=>'input-focus' %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>

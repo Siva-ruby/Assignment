@@ -1,0 +1,5 @@
+<% flash.each do |key, value| %>
+  <script type="text/javascript">
+    toastr.<%= key %>('<%= value%>!', '<%= key.capitalize %>')
+  </script>
+<% end %>

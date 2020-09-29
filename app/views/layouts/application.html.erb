@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to Health Center</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="stylesheet" href="/assets/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/animate.css">
+    <link rel="stylesheet" href="/assets/owl.carousel.css">
+    <link rel="stylesheet" href="/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/tooplate-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+  </head>
+
+  <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+    <%= render 'layouts/alert'%>
+    <section class="preloader">
+      <div class="spinner"><span class="spinner-rotate"></span></div>
+    </section>
+    <%= render 'layouts/header'%>
+
+    <%= yield %>
+
+    <script src="/assets/jquery.js"></script>
+    <script src="/assets/bootstrap.min.js"></script>
+    <script src="/assets/jquery.sticky.js"></script>
+    <script src="/assets/jquery.stellar.min.js"></script>
+    <script src="/assets/wow.min.js"></script>
+    <script src="/assets/smoothscroll.js"></script>
+    <script src="/assets/owl.carousel.min.js"></script>
+    <script src="/assets/custom.js"></script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+
+      <div class="row card-head">
+        <div class="card-text">Login to <span>H</span>ealth Center</div>
+        <div class="card-text">New to <span>H</span>ealth Center? <%= link_to 'Signup', new_user_registration_path %> now</div>
+      </div>
+
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="inp-field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", :class=>'input-focus' %>
+        </div>
+
+        <div class="inp-field">
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "current-password", :class=>'input-focus' %>
+        </div>
+
+        <% if devise_mapping.rememberable? %>
+          <div class="inp-field">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          </div>
+        <% end %>
+
+        <div class="actions text-right">
+          <%= f.submit "Log in", :class=>'submit-btn' %>
+        </div>
+      <% end %>
+
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>
